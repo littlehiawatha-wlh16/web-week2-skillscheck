@@ -107,6 +107,7 @@ let me = {
 	firstName: 'James',
 	state: 'Kansas',
 	age: 37,
+	greeter: function() { return `Hello! My name is ${firstName} and I live in ${state}`}
 	// greeter: function(me.firstName, me.state){
 	// 	return `Hello! My name is ${me.firstName} and I live in ${me.state}`
 	// }
@@ -116,8 +117,8 @@ let me = {
 	//greeter: `Hello! My name is ${me.firstName} and I live in ${me.state}`
 	
 };
-console.log(me)
- me.greeter = `Hello! My name is ${me.firstName} and I live in ${me.state}`
+// console.log(me)
+//  me.greeter = `Hello! My name is ${me.firstName} and I live in ${me.state}`
 //  `Hello! My name is ${me.firstName} and I live in ${me.state}`
 
 //////////////////PROBLEM 12////////////////////
@@ -236,11 +237,11 @@ const people = [
 
 // Code Here
 
-// let enemies = people.filter(function(element{
-// 	if(element === false){
-// 		return element.push
-// 	} 
-// }))
+let enemies = people.filter(function(element) {
+	if(element === false){
+		return element.push
+	} 
+})
 
 //////////////////PROBLEM 20////////////////////
 

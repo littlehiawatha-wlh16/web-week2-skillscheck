@@ -29,8 +29,8 @@ let setGroceryListTitle = function(x){
 let addItem = function (item){
    console.log(item)
    console.log(groceries)
-   displayData(addItem)
    return groceries.push(item)
+   displayData()
 }
 
 //////////////////STEP 5////////////////////
@@ -56,6 +56,8 @@ let checkGroceryCount = function(){
       return `1 item`
    } else if ( groceries.length > 1 && groceries.length < 5){
       return `${groceries.length} items` 
+   }else {
+      return `Your grocery list is empty.`
    }
 }
 
