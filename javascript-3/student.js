@@ -28,10 +28,10 @@ let setGroceryListTitle = function(x){
 
 let addItem = function (item){
    console.log(item)
-   console.log(groceries)
-   return groceries.push(item)
    displayData()
+   groceries.push(item)
 }
+console.log(groceries)
 
 //////////////////STEP 5////////////////////
 //Create a function called 'removeItem' that takes in one parameter called 'index'. Inside of the removeItem function, remove the item that corresponds to the index parameter from the groceries array above by using splice. Then, invoke the displayData() function inside of your removeItem function.

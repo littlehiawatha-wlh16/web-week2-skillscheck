@@ -126,18 +126,43 @@ let me = {
 // Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
 // Code here1
+
 let bigOrSmall = function(arr){
 	let answers = [];
-	for(i = 0; i < arr.length; i++){
-		if(i > 100){
-			return 'big'
-		}else{
-			return 'small'
-		}
-	}
-	return bigOrSmall
-}
+	for(let i = 0; i < arr.length; i++){
 
+		if(arr[i] <= 100) answers.push('small');
+		if(arr[i] > 100) answers.push('big');
+	}
+
+	return answers;
+
+};
+
+// 		if(arr[i] > 100) answers.push('big')
+// 		}else{
+// 			return answers.push('small')
+// 		}
+// 	}
+// 	return answers
+// }
+
+// // _______________________________________________________________________________________________
+
+// let bigOrSmall = function(arr){
+// 	let answers = [];
+// 	for(i = 0; i < arr.length; i++){
+// 		if(i > 100){
+// 			return 'big'
+// 		}else{
+// 			return 'small'
+// 		}
+// 	}
+// 	return bigOrSmall
+// }
+
+
+// // __________________________________________________________________________________________
 // let bigOrSmall = function(arr){
 // 	let answers = []
 // 	for(answers = 0; i < answers.length; i++){
@@ -155,14 +180,34 @@ let bigOrSmall = function(arr){
 // Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
 
 //Code Here
-let arrayReverser = function(arr){
-	let reversed = [];
-	for( i = arr.length - 1; i > 0; i--){
-		console.log(reversed)
-		return reversed.push
-	}
 
-}
+const arrayReverser = arr => {
+	let reversed = [];
+	for (let i = arr.length - 1; i >= 0; i--) {
+		reversed.push(arr[i]);
+	}
+	return reversed;
+};
+
+// let arrayReverser = function(arr){
+// 	let reversed = [];
+// 	for( let i = arr.length - 1; i >= 0; i--){
+// 		//console.log(reversed)
+// 		reversed.push(arr[i]);
+// 	}
+
+// }
+
+// // ------> original attempt <-------- // //
+
+// let arrayReverser = function(arr){
+// 	let reversed = [];
+// 	for( i = arr.length - 1; i > 0; i--){
+// 		console.log(reversed)
+// 		return reversed.push
+// 	}
+
+// }
 
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
@@ -203,20 +248,30 @@ let total = myNumbers.reduce(function(acc, element){
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
 // Code Here
-let myNumbersIndex = []
-myNumbers.forEach(function(element){
 
-	for(i = 0; i<myNumbers.length; i++){
-		console.log(myNumbers)
-		return myNumbers[i].push
-	}
-	console.log(myNumbersIndex)
-})
+let myNumbersIndex = [];
+
+myNumbers.forEach((elm, index) => myNumbersIndex.push(index));
+
+// let myNumbersIndex = [];
+// myNumbers.forEach((elm, index) => myNumbersIndex.push(index));  
+
+// // // ----------------------original code -------------------
+// let myNumbersIndex = [];
+// myNumbers.forEach(function(element){
+
+// 	for(i = 0; i<myNumbers.length; i++){
+// 		console.log(myNumbers)
+// 		return myNumbers[i].push
+// 	}
+// 	console.log(myNumbersIndex)
+// })
 
 //////////////////PROBLEM 18////////////////////
 
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
-const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
+const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela'];
+// let forTheLoveOfGeorge = notGeorge.map(elm => (elm = 'George'));
 
 // Code Here
 let forTheLoveOfGeorge = notGeorge.map(function(element){
@@ -237,11 +292,13 @@ const people = [
 
 // Code Here
 
-let enemies = people.filter(function(element) {
-	if(element === false){
-		return element.push
-	} 
-})
+let enemies = people.filter(elm => elm.awesomeLevel < 5);
+
+// let enemies = people.filter(function(element) {
+// 	if(element === false){
+// 		return element.push
+// 	} 
+// })
 
 //////////////////PROBLEM 20////////////////////
 
@@ -249,6 +306,8 @@ let enemies = people.filter(function(element) {
 
 // Code Here
 
-const totallyAwesome = people.reduce(function(acc,element){
-	return acc + element
-})
+let totallyAwesome = people.reduce((acc, curr) => acc + curr.awesomeLevel, 0);
+
+// const totallyAwesome = people.reduce(function(acc,element){
+// 	return acc + element
+// })
