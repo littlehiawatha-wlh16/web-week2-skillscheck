@@ -1,29 +1,33 @@
 //////////////////PROBLEM 1////////////////////
 
 // Create a variable called 'myName' with a value that is your name. 
-
+// let myName = 'Jacob'
 // Code here
 
 let myName = 'Jacob'
 
 //////////////////PROBLEM 2////////////////////
 
-// Create a variable called 'faveNum' with a value that is your favorite number. 
+// Create a variable called 'faveNum' with a value that is your favorite number.
+const faveNum = 2383949 
 
 //Code here
 let faveNum = 500038943579829749823908
 //////////////////PROBLEM 3////////////////////
 
 // Create a variable called 'lovesCode' and assign it a value of true.
+var lovesCode = false
 
 //Code here
 
-let lovesCode = true
+let lovesCode = false
 
 
 //////////////////PROBLEM 4////////////////////
 
 // Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. The function should return the sum of the two parameters.
+
+function sum
 
 //Code here
 
